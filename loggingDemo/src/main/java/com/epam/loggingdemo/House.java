@@ -4,7 +4,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.*;
+
 
 
 abstract class CalculateCost
@@ -40,9 +40,9 @@ class Material extends CalculateCost
 	}
 }
 
-public class House {
-	static{
-		private static final Logger LOG =LogManager.getLogger(House.class);
+class House {
+	public static void main(String args[]){
+		Logger LOG  =LogManager.getLogger(House.class);
 		String typeOfMaterial;
 		int areaOfHouse;
 		Scanner sc=new Scanner (System. in);
@@ -52,6 +52,7 @@ public class House {
 		areaOfHouse=sc.nextInt();
 		Material m = new Material();
 		m.show(typeOfMaterial, areaOfHouse);
+		sc.close();
 				
 	}
 

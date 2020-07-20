@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 public class App 
 {	  
         private static final Logger LOGGER =LogManager.getLogger(App.class);
-    	public static void main(String[] args) 
+    	public static void main(String[] args)
     	 {
     	    double amount, roi, years, si,ci;
     	    Scanner s=new Scanner (System. in);
@@ -27,5 +27,6 @@ public class App
     	    ci=amount * Math.pow(1.0+roi/100.0,years) - amount;
     	    LOGGER.info("Simple Interest="+si);
     	    LOGGER.info("Compound Interest="+ci);
+    	    s.close();
     	   }
 }
